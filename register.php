@@ -198,10 +198,7 @@
                           </div>
                         </div>
 
-                        <div class="col-12">
-                          <hr>
-                          <p>Already have an account? <a href="login.php">Click here!</a></p>
-                        </div>
+                        
 
                     </div>
                     <!-- END ROW -->

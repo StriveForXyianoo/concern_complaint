@@ -33,7 +33,7 @@
         </button>
       </div>
       <div class="modal-body">
-      <form id="DeleteForm" method="POST">
+      <form action="deletenewblotter.php" method="POST">
                     <input type="hidden" name="selectedIds" id="selectedIds" value="">
           <h6 class="text-center">Delete complaint record?</h6>
       </div>
@@ -58,7 +58,7 @@
                 <a href="blotter_add.php" class="btn btn-sm bg-primary ml-2"><i class="fa-sharp fa-solid fa-square-plus"></i> New Blotter</a>
                          
                           <button type="button" class="btn bg-danger btn-sm float-right mr-2 disabled delete-btn" data-toggle="modal" data-target="#delete"><i class="fas fa-trash"></i> Delete </button>
-                          <button type="button" class="btn bg-warning btn-sm float-right mr-2 disabled status-btn" data-toggle="modal" data-target="#UpdateStatus"><i class="fas fa-pencil-alt"></i> Status</button>
+                          <button type="button" class="btn bg-warning btn-sm float-right mr-2 disabled status-btn" ><i class="fas fa-pencil-alt"></i> Status</button>
                           <a class="btn btn-primary btn-sm float-right mr-2 disabled view-btn" href="" ><i class="fas fa-folder"></i> View</a>
                 <!-- <a href="export.php?export=blotter" class="btn btn-sm bg-success float-right mr-2"><i class="fa-solid fa-file-excel"></i> Export</a> -->
                 <!-- <div class="card-tools mr-1 mt-3">
@@ -95,7 +95,7 @@
                   </thead>
                   <tbody id="users_data">
                     <?php 
-                      $sql = mysqli_query($conn, "SELECT * FROM blotter ORDER BY c_firstname");
+                      $sql = mysqli_query($conn, "SELECT * FROM blotter ORDER BY incidentDate");
                       while ($row = mysqli_fetch_array($sql)) {
                     ?>
                     <tr>
@@ -190,35 +190,12 @@
         var selectedIds = $('.check-item:checked').map(function() {
             return $(this).val();
         }).get();
-        $('#selectedIdss').val(selectedIds.join(','));
+        $('#selectedIdss').val(selectedIds);
         // Set the value of hidden input field with selected IDs
         $('#updateStatus').modal('show'); // Show the modal
     });
 
-    // Function to handle form submission for updating status
-    $('#updateStatusForm').submit(function(event) {
-        // event.preventDefault(); // Prevent default form submission
-        
-        var formData = $(this).serialize(); // Serialize form data
-        // Send AJAX request to update status
-        $.ajax({
-            type: 'POST',
-            url: 'updatenewblotter.php',
-            data: formData,
-            success: function(response) {
-             
-                // Handle success
-                console.log(response);
-                // window.location.reload();
-            
-            },
-            error: function(xhr, status, error) {
-                // Handle error
-                alert('Error updating status!');
-                console.error(error);
-            }
-        });
-    }); 
+  
     $('.delete-btn').click(function() {
         var selectedIds = $('.check-item:checked').map(function() {
             return $(this).val();
@@ -227,30 +204,8 @@
         // Set the value of hidden input field with selected IDs
         
     });
-    // Function to handle form submission for updating status
-    $('#DeleteForm').submit(function(event) {
-        // event.preventDefault(); // Prevent default form submission
-        
-        var formData = $(this).serialize(); // Serialize form data
-        // Send AJAX request to update status
-        $.ajax({
-            type: 'POST',
-            url: 'deletenewblotter.php',
-            data: formData,
-            success: function(response) {
-             
-                // Handle success
-                console.log(response);
-                // window.location.reload();
-            
-            },
-            error: function(xhr, status, error) {
-                // Handle error
-                alert('Error updating status!');
-                console.error(error);
-            }
-        });
-    }); 
+    
+  
     
     
     
@@ -270,7 +225,7 @@
         </button>
       </div>
       <div class="modal-body">
-      <form id="updateStatusForm" method="POST">
+      <form action="updatenewblotter.php" method="POST">
                     <input type="hidden" name="selectedIdss" id="selectedIdss" value="">
                     <select name="blotter_status" class="form-control" required>
                         <option value="0">Open</option>

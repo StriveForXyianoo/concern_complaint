@@ -74,7 +74,7 @@
                   </thead>
                   <tbody id="users_data">
                     <?php 
-                      $sql = mysqli_query($conn, "SELECT * FROM complaint JOIN users ON complaint.added_by=users.user_Id");
+                      $sql = mysqli_query($conn, "SELECT * FROM complaint JOIN users ON complaint.added_by=users.user_Id ORDER BY complaint.date_happened  DESC");
                       while ($row = mysqli_fetch_array($sql)) {
                     ?>
                     <tr>
@@ -92,7 +92,7 @@
                             if($row['status'] == 0) {
                              echo '<span class="badge badge-info">Pending</span>';
                             } elseif($row['status'] == 1) {
-                             echo '<span class="badge badge-success">Verified</span>';
+                             echo '<span class="badge badge-success">On Process</span>';
                             } elseif($row['status'] == 2) {
                              echo '<span class="badge badge-danger">Rejected</span>';
                             } else {
@@ -231,7 +231,7 @@
                     <input type="hidden" name="selectedIdss" id="selectedIdss" value="">
                     <select name="complaint_status" class="form-control" id="" required>
                       <option value="0">Pending</option>
-                      <option value="1">Verified</option>
+                      <option value="1">On Process</option>
                       <option value="2">Rejected</option>
                       <option value="3">Solved</option>
                     </select>

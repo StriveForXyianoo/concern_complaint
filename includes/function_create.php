@@ -198,6 +198,47 @@
 	        }
 	    }
 
+		//select * all admin
+		$date = date('M d, Y',strtotime($incidentDate));
+		$admin = mysqli_query($conn, "SELECT * FROM users WHERE user_type='Admin'");
+		$admin_row = mysqli_fetch_array($admin);
+		$admin_contact = $admin_row['contact'];
+		$admin_name = $admin_row['firstname'].' '.$admin_row['lastname'];
+		$bname = $c_firstname.' '.$c_lastname;
+		$message = "Good Day ".$admin_name.'!'."\n";
+		$message .= "A new blotter has been filed by ".$bname.".\n\n";
+		$message .= "Details:"."\n";
+		$message .= "Nature of Incident: ".$incidentNature."\n";
+		$message .= "Incident Location: ".$incidentAddress ."\n";
+		$message .= "Incident Date: ".$date."\n";
+		$message .= "Incident Time: ".$incidentTime."\n\n";
+		$message .= "Please check the system for more details."."\n\n";
+
+
+
+
+
+
+		//send SMS
+		$ch = curl_init();
+
+		$ch = curl_init();
+		$parameters = array(
+			'apikey' => 'e73351f595cf7eaee32df330e33853f7', //Your API KEY
+			'number' => '0'.$admin_contact,
+			'message' => $message,
+			'sendername' => 'SEMAPHORE'
+		);
+			curl_setopt( $ch, CURLOPT_URL,'https://semaphore.co/api/v4/priority' );
+			curl_setopt( $ch, CURLOPT_POST, 1 );
+			//Send the parameters set above with the request
+			curl_setopt( $ch, CURLOPT_POSTFIELDS, http_build_query( $parameters ) );
+			// Receive response from server
+			curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
+			$output = curl_exec( $ch );
+			curl_close ($ch);
+
+
 	    $save = mysqli_query($conn, "INSERT INTO blotter (added_by, c_firstname, c_middlename, c_lastname, c_suffix, c_contact, c_address, incidentDate, incidentTime, incidentNature, incidentAddress, acc_firstname, acc_middlename, acc_lastname, acc_suffix, acc_address, witnesses, incidentDescription, actionTaken, attachments, date_added) VALUES ('$added_by', '$c_firstname', '$c_middlename', '$c_lastname', '$c_suffix', '$c_contact', '$c_address', '$incidentDate', '$incidentTime', '$incidentNature', '$incidentAddress', '$acc_firstname', '$acc_middlename', '$acc_lastname', '$acc_suffix', '$acc_address', '$witnesses', '$incidentDescription', '$actionTaken', '$image_name', NOW())");
 
 	    displaySaveMessage($save, $page);

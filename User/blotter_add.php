@@ -1,6 +1,11 @@
 <title>Concern and Complaint Reporting System | Blotter details</title>
 <?php
 require_once 'header.php';
+if(!isset($_POST['language'])){
+  $lang = 'en';
+} else {
+  $lang = $_POST['language'];
+}
 ?>
 
 <div class="content-wrapper">
@@ -8,12 +13,12 @@ require_once 'header.php';
     <div class="container">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="m-0"> Blotter details</h1>
+          <h1 class="m-0"> Blotter Details </h1>
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-            <li class="breadcrumb-item active">Blotter details add</li>
+            <li class="breadcrumb-item active">Blotter Details Add</li>
           </ol>
         </div>
       </div>
@@ -29,36 +34,36 @@ require_once 'header.php';
                       <div class="row">
 
                         <div class="col-lg-12 mt-1 mb-2">
-                          <a class="h5 text-primary"><b>Complainant Information</b></a>
+                          <a class="h5 text-primary"><b><?php if($lang=='tl'){echo 'Impormasyon ng Reklamo';}else{ echo 'Complainant Information';}?></b></a>
                           <div class="dropdown-divider"></div>
                         </div>
                         <div class="col-lg-4 col col-md-6 col-sm-6 col-12">
                             <div class="form-group">
-                              <span class="text-dark"><b>First name</b></span>
-                              <input type="text" class="form-control"  placeholder="First name" name="c_firstname" required onkeyup="lettersOnly(this)">
+                              <span class="text-dark"><b> <?php if($lang=='tl'){echo 'Unang Pangalan';}else{ echo 'First name';}?></b></span>
+                              <input type="text" class="form-control"   name="c_firstname" required onkeyup="lettersOnly(this)">
                             </div>
                         </div>
                         <div class="col-lg-3 col col-md-6 col-sm-6 col-12">
                           <div class="form-group">
-                              <span class="text-dark"><b>Middle name</b> (Optional)</span>
-                              <input type="text" class="form-control"  placeholder="Middle name" name="c_middlename">
+                              <span class="text-dark"><b><?php if($lang=='tl'){echo 'Gitnang Pangalan';}else{ echo 'Middle name';}?></b></span>
+                              <input type="text" class="form-control"   name="c_middlename">
                           </div>
                         </div>
                         <div class="col-lg-3 col col-md-6 col-sm-6 col-12">
                             <div class="form-group">
-                              <span class="text-dark"><b>Last name</b></span>
-                              <input type="text" class="form-control"  placeholder="Last name" name="c_lastname" required onkeyup="lettersOnly(this)">
+                              <span class="text-dark"><b><?php if($lang=='tl'){echo 'Apelyido';}else{ echo 'Last Name';}?></b></span>
+                              <input type="text" class="form-control"   name="c_lastname" required onkeyup="lettersOnly(this)">
                             </div>
                         </div>
                         <div class="col-lg-2 col-md-6 col-sm-6 col-12">
                           <div class="form-group">
                             <span class="text-dark"><b>Ext/Suffix</b> (Optional)</span>
-                            <input type="text" class="form-control"  placeholder="Ext/Suffix" name="c_suffix">
+                            <input type="text" class="form-control"   name="c_suffix">
                           </div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-6 col-12">
                             <div class="form-group">
-                              <span class="text-dark"><b>Contact number</b></span>
+                              <span class="text-dark"><b><?php if($lang=='tl'){echo 'Numero ng Telepono';}else{ echo 'Contact Number';}?></b></span>
                               <div class="input-group">
                                 <div class="input-group-text">+63</div>
                                 <input type="tel" class="form-control" pattern="[7-9]{1}[0-9]{9}" id="contact" name="c_contact" placeholder = "9123456789" required maxlength="10">
@@ -67,8 +72,8 @@ require_once 'header.php';
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-12">
                             <div class="form-group">
-                              <span class="text-dark"><b>Complete address</b></span>
-                              <textarea class="form-control" id="" cols="30" rows="2" placeholder="Complete address" name="c_address" required></textarea>
+                              <span class="text-dark"><b><?php if($lang=='tl'){echo 'Completong Tirahan';}else{ echo 'Complete Address';}?></b></span>
+                              <textarea class="form-control" id="" cols="30" rows="2"  name="c_address" required></textarea>
                             </div>
                         </div>
 
@@ -76,120 +81,120 @@ require_once 'header.php';
 
 
                         <div class="col-lg-12 mt-3 mb-2">
-                          <a class="h5 text-primary"><b>Incident Details</b></a>
+                          <a class="h5 text-primary"><b><?php if($lang=='tl'){echo 'Impormasyon Insidente';}else{ echo 'Incident Details';}?></b></a>
                           <div class="dropdown-divider"></div>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-6 col-12">
                             <div class="form-group">
-                              <span class="text-dark"><b>Date of the incident</b></span>
+                              <span class="text-dark"><b><?php if($lang=='tl'){echo 'Petsa ng Insidente';}else{ echo 'Date of the Incident';}?></b></span>
                               <input type="date" class="form-control"  placeholder="Family Head Name" name="incidentDate" required>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-6 col-12">
                             <div class="form-group">
-                              <span class="text-dark"><b>Time of the incident</b></span>
+                              <span class="text-dark"><b><?php if($lang=='tl'){echo 'Oras ng Insidente';}else{ echo 'Time of the Incident';}?></b></span>
                               <input type="time" class="form-control"  placeholder="Family Head Name" name="incidentTime" required>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                             <div class="form-group">
-                              <span class="text-dark"><b>Nature of incident</b></span>
-                              <input class="form-control" placeholder="Nature of incident (e.g., theft, disturbance, violence)" name="incidentNature" required>
+                              <span class="text-dark"><b> <?php if($lang=='tl'){echo 'Petisyon ng Reklamo';}else{ echo 'Nature of Incident';}?></b></span>
+                              <input class="form-control"  name="incidentNature" required>
                             </div>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-12">
                             <div class="form-group">
-                              <span class="text-dark"><b>Complete address</b></span>
-                              <textarea class="form-control" id="" cols="30" rows="2" placeholder="Complete address" name="incidentAddress" required></textarea>
+                              <span class="text-dark"><b><?php if($lang=='tl'){echo 'Lugar ng Insidente';}else{ echo 'Incident Address';}?></b></span>
+                              <textarea class="form-control" id="" cols="30" rows="2"  name="incidentAddress" required></textarea>
                             </div>
                         </div>
                         
 
 
                         <div class="col-lg-12 mt-3 mb-2">
-                          <a class="h5 text-primary"><b>Accused/Subject Information:</b></a>
+                          <a class="h5 text-primary"><b><?php if($lang=='tl'){echo 'Impormasyon ng Inaakusahan';}else{ echo 'Accused/Subject Information:';}?></b></a>
                           <div class="dropdown-divider"></div>
                         </div>
                         <div class="col-lg-4 col col-md-6 col-sm-6 col-12">
                             <div class="form-group">
-                              <span class="text-dark"><b>First name</b></span>
-                              <input type="text" class="form-control"  placeholder="First name" name="acc_firstname" required onkeyup="lettersOnly(this)">
+                              <span class="text-dark"><b><?php if($lang=='tl'){echo 'Unang Pangalan';}else{ echo 'First Name';}?></b></span>
+                              <input type="text" class="form-control"   name="acc_firstname" required onkeyup="lettersOnly(this)">
                             </div>
                         </div>
                         <div class="col-lg-3 col col-md-6 col-sm-6 col-12">
                           <div class="form-group">
-                              <span class="text-dark"><b>Middle name</b> (Optional)</span>
-                              <input type="text" class="form-control"  placeholder="Middle name" name="acc_middlename">
+                              <span class="text-dark"><b><?php if($lang=='tl'){echo 'Gitnang Pangalan';}else{ echo 'Middle Name';}?></b></span>
+                              <input type="text" class="form-control"   name="acc_middlename">
                           </div>
                         </div>
                         <div class="col-lg-3 col col-md-6 col-sm-6 col-12">
                             <div class="form-group">
-                              <span class="text-dark"><b>Last name</b></span>
-                              <input type="text" class="form-control"  placeholder="Last name" name="acc_lastname" required onkeyup="lettersOnly(this)">
+                              <span class="text-dark"><b><?php if($lang=='tl'){echo 'Huling Pangalan';}else{ echo 'Last Name';}?></b></span>
+                              <input type="text" class="form-control"   name="acc_lastname" required onkeyup="lettersOnly(this)">
                             </div>
                         </div>
                         <div class="col-lg-2 col-md-6 col-sm-6 col-12">
                           <div class="form-group">
                             <span class="text-dark"><b>Ext/Suffix</b> (Optional)</span>
-                            <input type="text" class="form-control"  placeholder="Ext/Suffix" name="acc_suffix">
+                            <input type="text" class="form-control"   name="acc_suffix">
                           </div>
                         </div>
                         
                         <div class="col-lg-12 col-md-12 col-sm-12 col-12">
                             <div class="form-group">
-                              <span class="text-dark"><b>Complete address</b></span>
-                              <textarea class="form-control" id="" cols="30" rows="2" placeholder="Complete address" name="acc_address" required></textarea>
+                              <span class="text-dark"><b><?php if($lang=='tl'){echo 'Kompletong Tirahan';}else{ echo 'Complete Address';}?></b></span>
+                              <textarea class="form-control" id="" cols="30" rows="2" name="acc_address" required></textarea>
                             </div>
                         </div>
 
 
                         <div class="col-lg-12 mt-3 mb-2">
-                          <a class="h5 text-primary"><b>Witness Information</b></a>
+                          <a class="h5 text-primary"><b><?php if($lang=='tl'){echo 'Impormasyon ng Saksi';}else{ echo 'Witness Information';}?></b></a>
                           <div class="dropdown-divider"></div>
                         </div>
                         <div class="col-lg-7 col-md-7 col-sm-12 col-12">
                             <div class="form-group">
-                              <span class="text-dark"><b>Name/s of Witnesses</b></span>
-                              <input type="text" class="form-control"  placeholder="Name/s of Witnesses" name="witnesses" required>
+                              <span class="text-dark"><b><?php if($lang=='tl'){echo 'Pangalan ng Saksi';}else{ echo 'Name/s of Witnesses';}?></b></span>
+                              <input type="text" class="form-control"  name="witnesses">
                             </div>
                         </div>
                        
 
 
                         <div class="col-lg-12 mt-3 mb-2">
-                          <a class="h5 text-primary"><b>Description of the Incident</b></a>
+                          <a class="h5 text-primary"><b><?php if($lang=='tl'){echo 'Paglalarawan ng Insidente';}else{ echo 'Description of the Incident';}?></b></a>
                           <div class="dropdown-divider"></div>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-12">
                             <div class="form-group">
-                              <span class="text-dark"><b>Narrative or description of what happened</b></span>
-                              <textarea class="form-control" id="" cols="30" rows="2" placeholder="Narrative or description of what happened" name="incidentDescription" required></textarea>
+                              <span class="text-dark"><b><?php if($lang=='tl'){echo 'Ilawaran o Ipaliwanag ang Insidente';}else{ echo 'Narrative or description of what happened';}?></b></span>
+                              <textarea class="form-control" id="" cols="30" rows="2"  name="incidentDescription" required></textarea>
                             </div>
                         </div>
 
                         <div class="col-lg-12 mt-3 mb-2">
-                          <a class="h5 text-primary"><b>Actions Taken</b></a>
+                          <a class="h5 text-primary"><b><?php if($lang=='tl'){echo 'Ginawang Action';}else{ echo 'Actions Taken';}?></b></a>
                           <div class="dropdown-divider"></div>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-12">
                             <div class="form-group">
-                              <span class="text-dark"><b>Actions Taken</b></span>
-                              <input type="text" class="form-control"  placeholder="Any initial actions taken by authorities or the Barangay in response to the incident" required name="actionTaken">
+                              <span class="text-dark"><b><?php if($lang=='tl'){echo 'Ginawang Action';}else{ echo 'Actions Taken';}?></b></span>
+                              <input type="text" class="form-control"   required name="actionTaken">
                             </div>
                         </div>
 
 
                         <div class="col-lg-12 mt-3 mb-2">
-                          <a class="h5 text-primary"><b>Attach any relevant documents or evidence (Photos)</b></a>
+                          <a class="h5 text-primary"><b><?php if($lang=='tl'){echo 'Maglagay ng dokemento bilang ebidensya sa Aksidente';}else{ echo 'Attach any relevant documents or evidence ';}?></b></a>
                           <div class="dropdown-divider"></div>
                         </div>
                         <div class="col-lg-8 col-md-8 col-sm-6 col-12">
                             <div class="form-group">
-                              <span class="text-dark"><b>Attachments</b></span>
+                              <span class="text-dark"><b><?php if($lang=='tl'){echo 'Ibidensya';}else{ echo 'Evidence';}?></b></span>
                               <div class="input-group">
                                 <div class="custom-file">
                                   <input type="file" class="custom-file-input" id="exampleInputFile" name="fileToUpload[]" onchange="getImagePreview(event)" multiple required>
-                                  <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                                  <label class="custom-file-label" for="exampleInputFile"><?php if($lang=='tl'){echo 'Pumili';}else{ echo 'Choose File';}?></label>
                                 </div>
                               </div>
                             </div>
@@ -205,8 +210,8 @@ require_once 'header.php';
                     <!-- END ROW -->
                     <hr>
                     <div class="float-right">
-                      <a href="blotter.php" class="btn btn-secondary btn-sm"><i class="fa-solid fa-ban"></i> Cancel</a>
-                      <button type="submit" class="btn btn-primary btn-sm" name="create_blotter"><i class="fa-solid fa-floppy-disk"></i> Submit</button>
+                      <a href="blotter.php" class="btn btn-secondary btn-sm"><i class="fa-solid fa-ban"></i> <?php if($lang=='tl'){echo 'Kanselahin';}else{ echo 'Cancel';}?></a>
+                      <button type="submit" class="btn btn-primary btn-sm" name="create_blotter"><i class="fa-solid fa-floppy-disk"></i> <?php if($lang=='tl'){echo 'Ipasa';}else{ echo 'Submit';}?></button>
                     </div>
                     </form>
 

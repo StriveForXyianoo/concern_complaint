@@ -5,16 +5,16 @@
     <div class="row p-3">
       <div class="col-lg-4 col-md-6 col-sm-6 col-12 bg-white">
         <label>Mission</label>
-        <p class="text-sm text-justify text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem ipsam saepe culpa, quia dolor recusandae obcaecati eligendi assumenda pariatur sapiente tempora iusto excepturi quasi minima voluptates ipsum reiciendis corrupti. Laudantium.</p>
+        <p class="text-sm text-justify text-muted">Our mission is to empower communities by providing a web-based platform for reporting concerns and complaints related to safety, fostering transparency, accountability, and collaboration among residents, law enforcement, and local authorities.</p>
       </div>
       <div class="col-lg-4 col-md-6 col-sm-6 col-12 bg-white">
         <label>Vision</label>
-        <p class="text-sm text-justify text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque vel deleniti in adipisci, facere quisquam amet aliquid qui, repudiandae, asperiores illum cupiditate voluptatibus? Natus optio minima veniam perspiciatis, deserunt. Eveniet.</p>
+        <p class="text-sm text-justify text-muted">We envision safer communities where every member feels heard and supported, leading to proactive problem-solving, effective resource allocation, and ultimately, a more secure and harmonious society.</p>
       </div>
       <div class="col-lg-4 col-md-6 col-sm-6 col-12 bg-white">
         <label>Contact Us</label>
-        <p class="text-sm text-justify text-muted"><i class="fa-solid fa-phone"></i> +63 9312181164</p>
-        <p class="text-sm text-justify text-muted"><i class="fa-solid fa-envelope"></i> admin@gmail.com</p>
+        <p class="text-sm text-justify text-muted"><i class="fas fa-phone"></i>  +63 9958242456</p>
+        <p class="text-sm text-justify text-muted"><i class="fas fa-envelope"></i>  acalitbinmaley@gmail.com</p>
       </div>
     </div>
     <div class="dropdown-divider"></div>

@@ -13,11 +13,13 @@ include '../config.php';
             $_SESSION['message'] = "Record has been deleted!";
 	        $_SESSION['text'] = "Deleted successfully!";
 	        $_SESSION['status'] = "success";
+            header('Location: blotter.php');
         
     } else {
         $_SESSION['message'] = "Deletion failed!";
         $_SESSION['text'] = "Please try again.";
         $_SESSION['status'] = "error";
+        header('Location: blotter.php');
         
     }
 

@@ -27,35 +27,24 @@
   <br>
   <br>
   <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+ 
   
 
   <footer class="main-footer">
-    <div class="row">
+    <div class="row p-3">
       <div class="col-lg-4 col-md-6 col-sm-6 col-12 bg-white">
         <label>Mission</label>
-        <p class="text-sm text-justify text-muted">Lorem ipsum, dolor sit, amet consectetur adipisicing elit. Veniam doloremque hic nam corrupti. Soluta ea, vero! Tenetur voluptatem rem, dolor quasi itaque inventore id nisi adipisci sunt, asperiores aut, provident?</p>
+        <p class="text-sm text-justify text-muted">Our mission is to empower communities by providing a web-based platform for reporting concerns and complaints related to safety, fostering transparency, accountability, and collaboration among residents, law enforcement, and local authorities.</p>
       </div>
       <div class="col-lg-4 col-md-6 col-sm-6 col-12 bg-white">
         <label>Vision</label>
-        <p class="text-sm text-justify text-muted">Lorem ipsum, dolor sit, amet consectetur adipisicing elit. Veniam doloremque hic nam corrupti. Soluta ea, vero! Tenetur voluptatem rem, dolor quasi itaque inventore id nisi adipisci sunt, asperiores aut, provident?</p>
+        <p class="text-sm text-justify text-muted">We envision safer communities where every member feels heard and supported, leading to proactive problem-solving, effective resource allocation, and ultimately, a more secure and harmonious society.</p>
       </div>
       <div class="col-lg-4 col-md-6 col-sm-6 col-12 bg-white">
         <label>Contact Us</label>
-        <p class="text-sm text-justify text-muted"><i class="fa-solid fa-phone"></i> +63 9312181164</p>
-        <p class="text-sm text-justify text-muted"><i class="fa-solid fa-envelope"></i> admin@gmail.com</p>
+        <p class="text-sm text-justify text-muted"><i class="fas fa-phone"></i>  +63 9958242456</p>
+        <p class="text-sm text-justify text-muted"><i class="fas fa-envelope"></i>  acalitbinmaley@gmail.com</p>
       </div>
-
     </div>
     <div class="dropdown-divider"></div>
     <strong>Copyright &copy; 2024 <a href="#">Concern and Complaint Reporting System</a>.</strong>

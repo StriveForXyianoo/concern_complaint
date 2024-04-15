@@ -57,10 +57,11 @@ require_once 'sidebar.php';
           <div class="small-box bg-warning">
             <div class="inner">
               <?php
-                $blotter = mysqli_query($conn, "SELECT blotter_Id from blotter");
-                $row_blotter = mysqli_num_rows($blotter);
+               $sql = "SELECT COUNT(blotter_Id) as blotter_Id FROM blotter";
+               $result = mysqli_query($conn,$sql);
+               $row = mysqli_fetch_assoc($result);
               ?>
-              <h3><?= $row_blotter ?></h3>
+              <h3><?= $row['blotter_Id'] ?></h3>
               <p>Blotter Records</p>
             </div>
             <div class="icon">
@@ -73,8 +74,11 @@ require_once 'sidebar.php';
           <div class="small-box bg-danger">
             <div class="inner">
               <?php
-                $compaint = mysqli_query($conn, "SELECT complaint_ID from complaint");
-                $row_compaint = mysqli_num_rows($compaint);
+               $sql = "SELECT COUNT(complaint_ID) as complaint_ID FROM complaint";
+
+                $result = mysqli_query($conn,$sql);
+                $row = mysqli_fetch_assoc($result);
+                $row_compaint = $row['complaint_ID'];
               ?>
               <h3><?= $row_compaint ?></h3>
               <p>Complaints</p>
