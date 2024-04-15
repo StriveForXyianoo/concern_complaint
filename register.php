@@ -151,7 +151,7 @@
                                         </span>
                                     </div>
                                 </div>
-                                <span id="password-message" class="text-bold" style="font-style: italic; font-size: 12px; color: #e60000;"></span>
+                                
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-12">
@@ -234,12 +234,12 @@
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
          <div class="modal-header bg-light">
-            <img src="dist/img/AdminLTELogo.png" alt="" class="d-block m-auto img-circle img-fluid shadow-sm" width="100">
+            <img src="images/logo.png" alt="" class="d-block m-auto img-circle img-fluid shadow-sm" width="100">
         </div>
         <div class="modal-body text-justify">
             <h5 class="modal-title text-center mb-4" id="exampleModalLabel">Terms and Conditions</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel metus id elit mollis blandit nec vel libero. In ut facilisis dolor. Donec efficitur velit id ligula egestas, nec volutpat sapien congue.</p>
-            <p>Curabitur ullamcorper feugiat velit, a egestas urna facilisis non. Sed in commodo nisl. Fusce vehicula dui at ligula blandit, sit amet dignissim justo volutpat. Integer sagittis, libero sit amet fermentum sagittis, neque dui hendrerit dolor.</p>
+            <p>The Web-based Concern and Complaint Reporting System for residents of Barangay Calit is accessible to individuals aged 15 years and older. Registration requires accurate information, with only one account allowed per resident. Users must maintain account confidentiality and use the system solely for reporting local concerns and complaints, refraining from unlawful activities. Submission guidelines mandate truthful information, while respectful communication and confidentiality of data are emphasized to ensure a positive and secure user experience.</p>
+            
             <!-- Add more terms and conditions text as needed -->
         </div>
         <div class="modal-footer alert-light">
