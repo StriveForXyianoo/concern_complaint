@@ -13,8 +13,8 @@
       </div>
       <div class="col-lg-4 col-md-6 col-sm-6 col-12 bg-white">
         <label>Contact Us</label>
-        <p class="text-sm text-justify text-muted"><i class="fas fa-phone"></i>  +63 9958242456</p>
-        <p class="text-sm text-justify text-muted"><i class="fas fa-envelope"></i>  acalitbinmaley@gmail.com</p>
+        <p class="text-sm text-justify text-muted"><i class="fas fa-phone"></i> +63 9958242456</p>
+        <p class="text-sm text-justify text-muted"><i class="fas fa-envelope"></i> calitbinmaley@gmail.com</p>
       </div>
     </div>
     <div class="dropdown-divider"></div>

@@ -11,7 +11,7 @@
     left: 50%;
     width: 70%; /* Adjust as needed */
     height: 70%; /* Adjust as needed */
-    background-image: url('images/logo.png');
+    /* background-image: url('images/logo.png'); */
     background-size: contain;
     background-position: center center; /* Center the background image */
     opacity: 0.1;
@@ -19,6 +19,7 @@
     filter: blur(2px);
     transform: translate(-50%, -50%); /* Center the div */
 }
+
 
 </style>
   <!-- Content Wrapper. Contains page content -->
