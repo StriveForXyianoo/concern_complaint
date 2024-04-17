@@ -155,7 +155,7 @@
                                 </span>
                             </div>
                         </div>
-                        <span id="password-message" class="text-bold" style="font-style: italic; font-size: 12px; color: #e60000;"></span>
+                        
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 col-12">

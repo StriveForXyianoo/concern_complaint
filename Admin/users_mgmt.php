@@ -143,7 +143,7 @@
                                 </span>
                             </div>
                         </div>
-                        <span id="password-message" class="text-bold" style="font-style: italic; font-size: 12px; color: #e60000;"></span>
+                        
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 col-12">
@@ -193,7 +193,7 @@
               <!-- END ROW -->
             </div>
             <div class="card-footer">
-              <a href="users.php" class="btn btn-secondary"><i class="fa-solid fa-backward"></i> Cancel</a>
+              <a href="users.php" class="btn btn-secondary float-right"><i class="fa-solid fa-backward"></i> Cancel</a>
               <button type="submit" class="btn btn-primary float-right" name="create_user" id="submit_button"><i class="fa-solid fa-floppy-disk"></i> Submit</button>
             </div>
           </div>
